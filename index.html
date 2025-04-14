@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aminul Islam - Learning & Development | Project Management | Automation Specialist</title>
+    
+    <!-- Preload critical fonts for performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    
+    <!-- Stylesheets with media queries for performance -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Enhanced Typography */
+        h1 {
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+        
+        h2 {
+            font-weight: 700;
+            letter-spacing: -0.015em;
+        }
+        
+        h3 {
+            font-weight: 600;
+        }
+        
+        p {
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        
+        /* Enhanced Gradients and Colors */
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #c3e0ff 50%, #1a94e6 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        /* Button Styles */
+        .primary-btn {
+            background-color: #0066ff;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .primary-btn:hover {
+            background-color: #0052cc;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 102, 255, 0.2), 0 4px 6px -2px rgba(0, 102, 255, 0.1);
+        }
+        
+        .primary-btn:active {
+            transform: translateY(0);
+        }
+        
+        .secondary-btn {
+            background-color: #e6f0ff;
+            color: #0066ff;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .secondary-btn:hover {
+            background-color: #d1e5ff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 102, 255, 0.1), 0 4px 6px -2px rgba(0, 102, 255, 0.05);
+        }
+        
+        .secondary-btn:active {
+            transform: translateY(0);
+        }
+        
+        .view-more-btn {
+            background-color: #0066ff;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .view-more-btn:hover {
+            background-color: #0052cc;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 102, 255, 0.1), 0 4px 6px -2px rgba(0, 102, 255, 0.05);
+        }
+        
+        /* Enhanced Section Dividers */
+        .section-divider {
+            height: 70px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .section-divider.wave-top {
+            margin-top: -70px;
+        }
+        
+        .section-divider.wave-bottom {
+            margin-bottom: -70px;
+        }
+        
+        .section-divider svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Enhanced Timeline */
+        .timeline-container {
+            position: relative;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #a5d8ff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 10px 40px;
+            z-index: 1;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 4px solid #0066ff;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item.left {
+            left: 0;
+        }
+        
+        .timeline-item.right {
+            left: 50%;
+        }
+        
+        .timeline-item.left::after {
+            right: -10px;
+        }
+        
+        .timeline-item.right::after {
+            left: -10px;
+        }
+        
+        /* Enhanced Experience Cards */
+        .experience-card {
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 3px solid transparent;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-left: 3px solid #0066ff;
+
+        }
+        
+        .experience-card.active {
+            border-left: 3px solid #0066ff;
+        }
+        
+        .experience-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+        }
+        
+        .experience-card.active .experience-details {
+            max-height: 300px;
+            opacity: 1;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+        }
+        
+        .toggle-icon {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .experience-card.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+    
+    
+        /* Experience Collapsible Section */
+        .hidden-experiences {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hidden-experiences.expanded {
+            max-height: 2000px; /* Large enough to contain all hidden experiences */
+        }
+        
+        .view-more-container, .view-less-container {
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        
+        /* Enhanced Card Designs */
+        .enhanced-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .enhanced-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+                0 4px 6px -2px rgba(0, 0, 0, 0.05),
+                0 0 0 1px rgba(0, 102, 255, 0.1);
+        }
+        
+        /* Enhanced Skill Icons */
+        .skill-icon {
+            color: #0066ff;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-card:hover .skill-icon {
+            transform: scale(1.1);
+        }
+        
+        /* Enhanced Tags */
+        .tag {
+            background-color: #e6f0ff;
+            color: #0066ff;
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            background-color: #0066ff;
+            color: white;
+        }
+        
+        /* Scroll Animations */
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .scroll-animation.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Form Submission Feedback */
+        .form-feedback {
+            display: none;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .form-feedback.success {
+            display: block;
+            background-color: #e6fffa;
+            color: #047857;
+            border: 1px solid #047857;
+        }
+        
+        .form-feedback.error {
+            display: block;
+            background-color: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #b91c1c;
+        }
+        
+        /* Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+            .timeline-container::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item.left::after,
+            .timeline-item.right::after {
+                left: 21px;
+            }
+            
+            .timeline-item.right {
+                left: 0;
+            }
+            
+            .expand-hint {
+                right: 10px;
+            }
+            
+            /* Improved touch targets for mobile */
+            .experience-card, 
+            .nav-link,
+            .primary-btn,
+            .secondary-btn,
+            .view-more-btn,
+            .view-less-btn {
+                min-height: 44px;
+            }
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Optimized animations for reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white bg-opacity-90 shadow-md transition-colors duration-300 backdrop-filter backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl font-bold text-gray-800">Aminul Islam</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 nav-link">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 nav-link">Experience</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 nav-link">Projects</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 nav-link">Skills</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 nav-link">Testimonials</a>
+                    <a href="#blog" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 nav-link">Blog</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 nav-link">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md transition-all duration-300">
+            <div class="container mx-auto px-6 py-3 flex flex-col space-y-4">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 py-2">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 py-2">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 py-2">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 py-2">Skills</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 py-2">Testimonials</a>
+                <a href="#blog" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 py-2">Blog</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-gradient min-h-screen flex items-center pt-16 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-12 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 scroll-animation">Aminul Islam</h1>
+                    <h2 class="text-2xl md:text-3xl text-blue-600 mb-8 scroll-animation">Learning & Development | Project Management | Automation Specialist</h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg scroll-animation">Tech-savvy professional with expertise in process optimization, product strategy, and designing impactful, people-centric solutions that drive growth and efficiency.
+
+                    </p>
+                    <div class="flex space-x-4 scroll-animation">
+                        <a href="#contact" class="px-6 py-3 primary-btn text-white font-medium rounded-lg shadow-md">Let's Connect</a>
+                        <a href="https://drive.google.com/file/d/1YmoWE_TBtzABggoEa9mvjDwN5lsyXwVz/view?usp=sharing" class="px-6 py-3 secondary-btn font-medium rounded-lg shadow-md">View Resume</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center scroll-animation">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white overflow-hidden shadow-xl border-4 border-blue-100 transform transition-all duration-500 hover:scale-105">
+                        <!-- Replace with your photo -->
+                        <img src="https://i.postimg.cc/LsC6V4RT/image-removebg-preview.png" alt="Aminul Islam" class="w-full h-full object-cover" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider wave-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 scroll-animation">About Me</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden scroll-animation enhanced-card">
+                <div class="p-8">
+                    <p class="text-lg">
+                        A tech-driven L&D professional with a passion for innovation, I specialize in streamlining processes, enhancing learning strategies, and driving impact through smart, data-backed solutions. With a deep understanding of technology and human development, I create scalable systems that fuel growth, boost performance, and inspire continuous improvement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#f9fafb" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,122.7C384,117,480,139,576,149.3C672,160,768,160,864,176C960,192,1056,224,1152,218.7C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50 transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 scroll-animation">Professional Experience</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+            <div class="timeline-container max-w-7xl mx-auto">
+                <!-- Recent Experiences (Always Visible) -->
+                
+                 <!-- Experience 0 -->
+                 <div class="timeline-item left scroll-animation">
+                    <div class="bg-white rounded-xl shadow-md p-6 transition-colors duration-300 enhanced-card experience-card">
+                        <div class="flex justify-between items-center relative">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Senior Executive, Learning & Development</h3>
+                                <h4 class="text-blue-600 mb-2">NEXT Ventures | April 2025 - Present</h4>
+                            </div>
+                            <i class="fas fa-chevron-down text-blue-600 toggle-icon"></i>
+                        </div>
+                        <div class="experience-details mt-4">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Lead the development and execution of data-driven L&D strategies that directly support business growth and performance improvement</li>
+                                <li>Act as a strategic partner to leadership and cross-functional teams, aligning training initiatives with organizational priorities and skill demands</li>
+                                <li>Champion modern learning technologies to deliver scalable, engaging, and future-ready training solutions across the organization</li>
+                                <li>Drive measurable impact through continuous program evaluation, real-time feedback, and performance analytics to ensure clear ROI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 1 -->            
+                <div class="timeline-item right scroll-animation">
+                    <div class="bg-white rounded-xl shadow-md p-6 transition-colors duration-300 enhanced-card experience-card">
+                        <div class="flex justify-between items-center relative">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Senior Executive, Voice of Customer Management</h3>
+                                <h4 class="text-blue-600 mb-2">Pathao Limited | May 2024 - Present</h4>
+                            </div>
+                            <i class="fas fa-chevron-down text-blue-600 toggle-icon"></i>
+                        </div>
+                        <div class="experience-details mt-4">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Act as a bridge between customer feedback and internal teams (product, marketing, tech, operations)</li>
+                                <li>Spearhead the creation of customer-focused policies that improve service quality</li>
+                                <li>Lead collaboration across product, engineering, and operations teams</li>
+                                <li>Collect and analyze customer insights to inform decision-making and product development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="timeline-item left scroll-animation">
+                    <div class="bg-white rounded-xl shadow-md p-6 transition-colors duration-300 enhanced-card experience-card">
+                        <div class="flex justify-between items-center relative">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Senior Executive, Learning and Development</h3>
+                                <h4 class="text-blue-600 mb-2">Pathao Limited | January 2024 - May 2024</h4>
+                            </div>
+                            <i class="fas fa-chevron-down text-blue-600 toggle-icon"></i>
+                        </div>
+                        <div class="experience-details mt-4">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Developed comprehensive training programs for product adoption</li>
+                                <li>Led projects to streamline operational processes</li>
+                                <li>Translated user feedback into insights for feature prioritization</li>
+                                <li>Collaborated with product teams to implement feature enhancements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+               
+
+                <!-- View More Button -->
+                <div class="view-more-container scroll-animation">
+                    <button id="view-more-experiences" class="px-6 py-3 view-more-btn text-white font-medium rounded-lg shadow-md"> View All
+                        <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Hidden Experiences (Initially Collapsed) -->
+                <div class="hidden-experiences">
+
+                     <!-- Experience 3 -->
+                <div class="timeline-item right scroll-animation">
+                    <div class="bg-white rounded-xl shadow-md p-6 transition-colors duration-300 enhanced-card experience-card">
+                        <div class="flex justify-between items-center relative">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Executive, Learning and Development</h3>
+                                <h4 class="text-blue-600 mb-2">Pathao Limited | January 2023 - January 2024</h4>
+                            </div>
+                            <i class="fas fa-chevron-down text-blue-600 toggle-icon"></i>
+                        </div>
+                        <div class="experience-details mt-4">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Designed and managed knowledge bases and data dashboards</li>
+                                <li>Created training materials and user guides for product updates</li>
+                                <li>Provided detailed analysis on product performance and training effectiveness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Experience 4 -->
+                    <div class="timeline-item left scroll-animation">
+                        <div class="bg-white rounded-xl shadow-md p-6 transition-colors duration-300 enhanced-card experience-card">
+                            <div class="flex justify-between items-center relative">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Junior Executive, Training & Quality Management</h3>
+                                    <h4 class="text-blue-600 mb-2">Pathao Limited | February 2022 - January 2023</h4>
+                                </div>
+                                <i class="fas fa-chevron-down text-blue-600 toggle-icon"></i>
+                            </div>
+                            <div class="experience-details mt-4">
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>Led training sessions for smooth onboarding of agents and leadership</li>
+                                    <li>Assessed customer interactions to ensure quality standards</li>
+                                    <li>Worked with product teams to identify pain points and suggest improvements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 5 -->
+                    <div class="timeline-item right scroll-animation">
+                        <div class="bg-white rounded-xl shadow-md p-6 transition-colors duration-300 enhanced-card experience-card">
+                            <div class="flex justify-between items-center relative">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Customer Experience Officer</h3>
+                                    <h4 class="text-blue-600 mb-2">Pathao Limited | January 2021 - February 2022</h4>
+                                </div>
+                                <i class="fas fa-chevron-down text-blue-600 toggle-icon"></i>
+                            </div>
+                            <div class="experience-details mt-4">
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>Assisted customers with product-related issues via multiple channels</li>
+                                    <li>Managed logistics of Pathao's product verticals (Rides, Food, Courier, Shop)</li>
+                                    <li>Improved user engagement and satisfaction through effective support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 6 -->
+                    <div class="timeline-item left scroll-animation">
+                        <div class="bg-white rounded-xl shadow-md p-6 transition-colors duration-300 enhanced-card experience-card">
+                            <div class="flex justify-between items-center relative">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Customer Service Officer</h3>
+                                    <h4 class="text-blue-600 mb-2">Genex Infosys | December 2019 - January 2021</h4>
+                                </div>
+                                <i class="fas fa-chevron-down text-blue-600 toggle-icon"></i>
+                            </div>
+                            <div class="experience-details mt-4">
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>Delivered product support for foodpanda Bangladesh</li>
+                                    <li>Ensured customers could navigate and utilize the platform effectively</li>
+                                    <li>Resolved customer issues to maintain satisfaction and retention</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider wave-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#ffffff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,133.3C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Projects/Case Studies Section -->
+    <section id="projects" class="py-20 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 scroll-animation">Projects & Case Studies</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden enhanced-card scroll-animation">
+                    <img src="https://cdn.prod.website-files.com/6734e78d4ffb0feb6cffde8c/6734e78e4ffb0feb6cffe9ee_customer-feedback-system.webp" alt="Customer Feedback System" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Customer Feedback Integration System</h3>
+                        <p class="text-gray-600 mb-4">Developed a comprehensive system to collect, analyze, and transform customer feedback into actionable product improvements.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 tag rounded-full text-sm">Product Strategy</span>
+                            <span class="px-3 py-1 tag rounded-full text-sm">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden enhanced-card scroll-animation">
+                    <img src="https://miro.medium.com/v2/resize:fit:1041/1*qVvx08kO41etwGnjrmFmIw.jpeg" alt="Training Program" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Product Training & Enablement</h3>
+                        <p class="text-gray-600 mb-4">Created comprehensive training programs ensuring seamless delivery of product knowledge and updates to all employees.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 tag rounded-full text-sm">Training Design</span>
+                            <span class="px-3 py-1 tag rounded-full text-sm">Knowledge Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden enhanced-card scroll-animation">
+                    <img src="https://www.m-inc.com/content/uploads/2018/08/00-Business-Process-Improvement.png" alt="Process Optimization" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Process Improvement Initiative</h3>
+                        <p class="text-gray-600 mb-4">Led projects to streamline operational processes, collaborating with product teams to implement feature enhancements.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 tag rounded-full text-sm">Process Optimization</span>
+                            <span class="px-3 py-1 tag rounded-full text-sm">Cross-Functional Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#f9fafb" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,133.3C672,160,768,192,864,186.7C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 scroll-animation">Skills & Expertise</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+            <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center enhanced-card scroll-animation skill-card">
+                    <i class="fas fa-sitemap text-4xl skill-icon mb-4"></i>
+                    <h3 class="text-lg font-semibold">Product Strategy</h3>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center enhanced-card scroll-animation skill-card">
+                    <i class="fas fa-users text-4xl skill-icon mb-4"></i>
+                    <h3 class="text-lg font-semibold">Customer-Centric Design</h3>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center enhanced-card scroll-animation skill-card">
+                    <i class="fas fa-tasks text-4xl skill-icon mb-4"></i>
+                    <h3 class="text-lg font-semibold">Agile Methodologies</h3>
+                </div>
+                
+                <!-- Skill 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center enhanced-card scroll-animation skill-card">
+                    <i class="fas fa-users-cog text-4xl skill-icon mb-4"></i>
+                    <h3 class="text-lg font-semibold">Cross-Functional Leadership</h3>
+                </div>
+                
+                <!-- Skill 5 -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center enhanced-card scroll-animation skill-card">
+                    <i class="fas fa-database text-4xl skill-icon mb-4"></i>
+                    <h3 class="text-lg font-semibold">SQL & Data Analysis</h3>
+                </div>
+                
+                <!-- Skill 6 -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center enhanced-card scroll-animation skill-card">
+                    <i class="fas fa-chart-bar text-4xl skill-icon mb-4"></i>
+                    <h3 class="text-lg font-semibold">Data Visualization</h3>
+                </div>
+                
+                <!-- Skill 7 -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center enhanced-card scroll-animation skill-card">
+                    <i class="fas fa-search-plus text-4xl skill-icon mb-4"></i>
+                    <h3 class="text-lg font-semibold">User Research</h3>
+                </div>
+                
+                <!-- Skill 8 -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center enhanced-card scroll-animation skill-card">
+                    <i class="fas fa-paint-brush text-4xl skill-icon mb-4"></i>
+                    <h3 class="text-lg font-semibold">UI/UX Fundamentals</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider wave-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#ffffff" fill-opacity="1" d="M0,32L48,53.3C96,75,192,117,288,144C384,171,480,181,576,165.3C672,149,768,107,864,101.3C960,96,1056,128,1152,138.7C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 scroll-animation">Testimonials</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gray-50 rounded-xl shadow-md p-6 relative scroll-animation enhanced-card">
+                        <div class="text-5xl text-blue-200 absolute top-4 left-4">"</div>
+                        <div class="pt-8 pb-4 px-4">
+                            <p class="text-gray-600 mb-6 relative z-10">Aminul's ability to translate customer feedback into actionable product improvements has been invaluable. His data-driven approach and cross-functional leadership skills have significantly enhanced our product development process.</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 overflow-hidden mr-4">
+                                    <img src="https://media.licdn.com/dms/image/v2/C5603AQGkaD46oq6_SQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1574780565436?e=1750291200&v=beta&t=_m1dBAeupaz88E5abmIUmWn4-HgnFgem8Al5KdArqkM" alt="Testimonial" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Abdullah Zuhair</h4>
+                                    <p class="text-sm text-gray-500">Senior Product Manager<br>Pathao Limited</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gray-50 rounded-xl shadow-md p-6 relative scroll-animation enhanced-card">
+                        <div class="text-5xl text-blue-200 absolute top-4 left-4">"</div>
+                        <div class="pt-8 pb-4 px-4">
+                            <p class="text-gray-600 mb-6 relative z-10">The training programs and knowledge management systems Aminul developed have transformed our team's performance. His innovative approach to process optimization has streamlined our operations and improved customer satisfaction.</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 overflow-hidden mr-4">
+                                    <img src="https://media.licdn.com/dms/image/v2/C5603AQE7DEXCIaPRvQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1663178899034?e=1750291200&v=beta&t=6VgEyRH5XrjcVdncHcJtiEaojVPRO_HMqxA9AAZUgYE" alt="Testimonial" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Md. Rashedul Islam</h4>
+                                    <p class="text-sm text-gray-500">Head of Learning & Quality Assurance<br>Pathao Limited</p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#f9fafb" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Blog/Insights Section -->
+    <section id="blog" class="py-20 bg-gray-50 transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 scroll-animation">Blog & Insights</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               
+                   <!-- Blog Post 1 -->
+                   <div class="bg-white rounded-xl shadow-md overflow-hidden enhanced-card scroll-animation">
+                    <img src="https://media.licdn.com/dms/image/v2/D5612AQEG3ULUosmhSQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1736861715420?e=1750291200&v=beta&t=0AXZUPi4YpMGkwkyvBVmcOgNq2uM2d2S2gKOh96HhsM" alt="Blog Post" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="text-sm text-blue-600 mb-2">March 22, 2023</div>
+                        <h3 class="text-xl font-bold mb-2">Mastering Public Speaking for Corporate Beginners</h3>
+                        <p class="text-gray-600 mb-4">Starting out is exciting, but speaking up can be tough. Nerves are normal—learn why they happen and build confidence through practice.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium group inline-flex items-center">
+                            Read More 
+                            <span class="ml-1 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        </a>
+                    </div>
+                </div>               
+
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden enhanced-card scroll-animation">
+                    <img src="https://media.licdn.com/dms/image/v2/D5612AQHUHzBK0xirHA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1705649602684?e=2147483647&v=beta&t=8UZLlsqzPGoG6yyYyQg1t3E8CzcGx3JZAbk9O4uCGls" alt="Blog Post" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="text-sm text-blue-600 mb-2">April 15, 2023</div>
+                        <h3 class="text-xl font-bold mb-2">Leveraging Customer Feedback for Product Innovation</h3>
+                        <p class="text-gray-600 mb-4">How to create effective feedback loops that drive meaningful product improvements and enhance customer satisfaction.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium group inline-flex items-center">
+                            Read More 
+                            <span class="ml-1 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden enhanced-card scroll-animation">
+                    <img src="https://www.superoffice.com/globalassets/blog/2019/10/data-driven-decision.jpg" alt="Blog Post" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="text-sm text-blue-600 mb-2">March 22, 2023</div>
+                        <h3 class="text-xl font-bold mb-2">Data-Driven Decision Making in Product Development</h3>
+                        <p class="text-gray-600 mb-4">Strategies for using customer data and insights to inform product decisions and prioritize feature development.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium group inline-flex items-center">
+                            Read More 
+                            <span class="ml-1 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        </a>
+                    </div>
+                </div>
+                
+             
+
+                <!-- Blog Post 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden enhanced-card scroll-animation">
+                    <img src="https://www.vectorsolutions.com/wp-content/uploads/2020/10/effective-training-programs-648x339.jpg" alt="Blog Post" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="text-sm text-blue-600 mb-2">February 10, 2023</div>
+                        <h3 class="text-xl font-bold mb-2">Building Effective Training Programs for Product Teams</h3>
+                        <p class="text-gray-600 mb-4">How to design and implement training initiatives that enhance product knowledge and drive adoption across organizations.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium group inline-flex items-center">
+                            Read More 
+                            <span class="ml-1 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="section-divider wave-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#ffffff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,133.3C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 scroll-animation">Get In Touch</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2 scroll-animation">
+                    <form id="contact-form" class="bg-gray-50 rounded-xl shadow-md p-8 enhanced-card">
+                        <div class="mb-6">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 transition-all duration-300" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 transition-all duration-300" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 transition-all duration-300" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 primary-btn text-white font-medium rounded-lg shadow-md">Send Message</button>
+                        <div id="form-feedback" class="form-feedback mt-4"></div>
+                    </form>
+                </div>
+                <div class="md:w-1/2 scroll-animation">
+                    <div class="bg-gray-50 rounded-xl shadow-md p-8 h-full enhanced-card">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope skill-icon mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">aminulislamborhan@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone skill-icon mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-600">+8801632257352</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt skill-icon mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Location</h4>
+                                    <p class="text-gray-600">Dhaka North, Bangladesh</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-xl font-bold mb-4">Connect With Me</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/theaminulislam/" class="text-gray-600 hover:text-blue-600 text-2xl transition-colors duration-300 transform hover:scale-110">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://github.com/mr-aminul" class="text-gray-600 hover:text-blue-600 text-2xl transition-colors duration-300 transform hover:scale-110">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://facebook.com/mister.aminul" class="text-gray-600 hover:text-blue-600 text-2xl transition-colors duration-300 transform hover:scale-110">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-blue-600 text-white transition-colors duration-300">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2023 Aminul Islam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript - Optimized for performance -->
+    <script>
+        // Use event delegation for better performance
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle with improved performance
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                // Event delegation for mobile menu links
+                mobileMenu.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'A') {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            }
+            
+            // Experience Cards Toggle with event delegation
+            const experienceSection = document.getElementById('experience');
+            if (experienceSection) {
+                experienceSection.addEventListener('click', (e) => {
+                    // Find closest experience card if clicked on or within one
+                    const card = e.target.closest('.experience-card');
+                    if (card) {
+                        card.classList.toggle('active');
+                    }
+                });
+            }
+            
+            // View More/Less Experiences Button
+            const viewMoreBtn = document.getElementById('view-more-experiences');
+            const viewLessBtn = document.getElementById('view-less-experiences');
+            const hiddenExperiences = document.querySelector('.hidden-experiences');
+            
+            if (viewMoreBtn && hiddenExperiences) {
+                viewMoreBtn.addEventListener('click', () => {
+                    hiddenExperiences.classList.add('expanded');
+                    viewMoreBtn.style.display = 'none';
+                });
+            }
+            
+            if (viewLessBtn && hiddenExperiences) {
+                viewLessBtn.addEventListener('click', () => {
+                    hiddenExperiences.classList.remove('expanded');
+                    viewMoreBtn.style.display = 'block';
+                    // Scroll back to the experience section
+                    document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+            
+            // Optimized scroll animation with IntersectionObserver
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+            
+            if ('IntersectionObserver' in window) {
+                const scrollObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            // Unobserve after animation to improve performance
+                            scrollObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+                
+                scrollElements.forEach(el => scrollObserver.observe(el));
+            } else {
+                // Fallback for browsers that don't support IntersectionObserver
+                scrollElements.forEach(el => el.classList.add('active'));
+            }
+            
+            // Lazy load images that aren't marked with loading="lazy"
+            if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img:not([loading])');
+                images.forEach(img => {
+                    img.setAttribute('loading', 'lazy');
+                });
+            }
+            
+            // Form submission to Google Sheets
+            const contactForm = document.getElementById('contact-form');
+            const formFeedback = document.getElementById('form-feedback');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Validate form before submission
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    if (!name || !email || !message) {
+                        formFeedback.textContent = 'Please fill out all fields before sending your message.';
+                        formFeedback.className = 'form-feedback error';
+                        return false;
+                    }
+                    
+                    // Prepare form data for Google Sheets
+                    const formData = new FormData();
+                    formData.append('name', name);
+                    formData.append('email', email);
+                    formData.append('message', message);
+                    formData.append('timestamp', new Date().toISOString());
+                    
+                    // Replace this URL with your actual Google Sheets script URL
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxjFePyveN9OYrQX9YOI-fpyBV3La_d-3b35Z74aGuucfs4z1AQtQKDWC8sopJwH0yL/exec';
+                    
+                    // Show loading state
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Send data to Google Sheets
+                    fetch(scriptURL, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Success message
+                            formFeedback.textContent = 'Thank you! Your message has been sent successfully.';
+                            formFeedback.className = 'form-feedback success';
+                            contactForm.reset();
+                        } else {
+                            // Error message
+                            formFeedback.textContent = 'Oops! Something went wrong. Please try again later.';
+                            formFeedback.className = 'form-feedback error';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        formFeedback.textContent = 'Oops! Something went wrong. Please try again later.';
+                        formFeedback.className = 'form-feedback error';
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
